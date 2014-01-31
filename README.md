@@ -42,13 +42,14 @@ app/javascipts/video.js
 
 - uses BackbonePageableCollection to create very simple RESTful infinitely paging videos
 - BackbonePageableCollection picks up pagination data from Link header
+- Videos rendered from JSON using Hogan Templates
 
 
 
 Design problems that existing before refactor.
 
 
-- Non DRY controller code replication for web and API  (controllers/video & v1/controllers.video)
+- Non DRY controller code replication for web and API  (controllers/video & v1/controllers/video)
 - Pagination felt much more hacky on web side.
 
 ie.

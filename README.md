@@ -19,7 +19,7 @@ app/models/video.rb
 
 app/controllers/v1/base_controller.rb
 
-- Shared code for adding Links Headers for Pogination (http://tools.ietf.org/search/rfc5988)
+- Shared code for adding Links Headers for Pagination (http://tools.ietf.org/search/rfc5988)
 - WrapParams as non-envloped params sent to controller 
  ( as per http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
 
@@ -50,13 +50,17 @@ Design problems that existing before refactor.
 - Non DRY controller code replication for web and API  (controllers/video & v1/controllers.video)
 - Pagination felt much more hacky on web side.
 
+ie.
 
-infinite scrolling triggered view/videos/index.js.erb which the
+infinite scrolling triggered view/videos/index.js.erb which has logic:
 
 if first page or search params change
-delete grid container, render grid container partial + first page
+
+-delete grid container, render grid container partial + first page
+
 if not first page
-append grid page
+
+-append grid page
 
 
 

@@ -1,6 +1,6 @@
 This repository is excerpts of functionality pulled out of a Ruby on Rails App I have architected. It aims to show the use interesting features and best practices in Rails Development.
 
-Here exists a Video resource for an app that is both a website and Application API endpoint.
+Here exists a Video resource for an app that is both a website and Application (iOS,Andoid) API endpoint.
 
 To reduce maintenence both the website and Application use the API. The website uses Backbone Models to achive this. The API is versioned, following RESTful principles.
 
@@ -50,7 +50,7 @@ Design problems that existing before refactor.
 
 
 - Non DRY controller code replication for web and API  (controllers/video & v1/controllers/video)
-- Pagination felt much more hacky on web side.
+- Pagination felt much more hacky on web side, and differed greatly from how App (iOS) did things.
 
 ie.
 

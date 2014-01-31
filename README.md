@@ -27,6 +27,7 @@ app/controllers/v1/base_controller.rb
 app/controllers/v1/videos_controller.rb
 
 - index action builds up Mongoid criteria from filtering/sorting paramaters
+- Uses SettingsLogic to pull out app settings (pagination page count)
 - update/destroy actions use authorizer ( 'authority' gem)
 - defult render: json uses serializer (ActiveModelSerializers) - app/serializers/video_serializer.rb
 

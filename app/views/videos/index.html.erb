@@ -1,0 +1,53 @@
+
+	<div class="form-horizontal" id="video-search-filter-bar" style="display:none;margin-top:6px;margin-left:4px;">
+	
+		<button id="videos-fav-button" class="btn" data-active="false"><span class="pictos">S</span></button>
+	
+		<select id="videos-filter" class="selectpicker" style="margin-top:2px;">
+		
+			<option value="">Category</option>
+			<option value="">------</option>
+		
+		<% Video.get_default_tags_values.each do |cat| %>
+
+	    	<option value=<%=cat[1]%> > <%=cat[0]%></option>
+
+		<%end%>
+
+		</select>
+	
+		<select id="videos-sort" class="selectpicker" style="margin-top:2px;">
+			<option value="">Sort</option>
+			<option value="">------</option>
+		
+			<option value="hotness">Trending</option>
+			<option value="created_at">Latest</option>
+			<option value="fav_count">Popular</option>	
+			
+		</select>
+	
+	
+		<input id="videos-search-term" type="text" class="input-xxlarge" placeholder="Video Search">
+	
+	
+	</div>
+	
+
+
+
+	<div id="video-grid" style="margin-top:10px;">
+	</div>
+
+
+
+
+<script>
+
+$(function() {
+
+	initVideos() 
+
+});
+</script>
+
+

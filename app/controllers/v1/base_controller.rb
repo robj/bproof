@@ -1,14 +1,12 @@
 class V1::BaseController < ApplicationController
+ 
   skip_before_filter :verify_authenticity_token  
-  skip_before_filter :step_through_signup
-  skip_before_filter :ensure_at_least_one_profile_image  
+
 
   wrap_parameters format: [:json]
-  ##, exclude: [:auth_token]
 
 
-
- #http://jimbocortes.com/post/33940132243/adding-api-pagination-in-the-response-header
+ # http://jimbocortes.com/post/33940132243/adding-api-pagination-in-the-response-header
  # this gives me last and first, unlike api-pagination
 
  # above reference has 2 errors,  '>' after rel , and Links instead of Link

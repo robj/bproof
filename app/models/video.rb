@@ -4,6 +4,7 @@ class Video
 	include Mongoid::Timestamps
 
 	before_save :cache_hotness
+	before_create :transcode
 
 	symbolize :encoded_state, :in => [:queued, :encoding, :failed, :finished], :default => :queued, :allow_blank => false, :scopes => true, :i18n => false
 

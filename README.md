@@ -1,11 +1,11 @@
-This repository is excerpts of functionality pulled out of a Ruby on Rails App I have architected. It aims to show the use interesting features and best practices in Rails Development.
+This repository is excerpts of functionality pulled out of a Ruby on Rails App I have architected. It aims to show the use interesting features and best practices in Rails Development. (In a consise manner, full Model code or supporting files are  not included)
 
 Here exists a Video resource for an app that is both a website and Application (iOS,Andoid) API endpoint.
 
 To reduce maintenence both the website and Application use the API. The website uses Backbone Models to achive this. The API is versioned, following RESTful principles.
 
 
-app/routes.rb
+config/routes.rb
 
 - versioned API, only RESTful actions
 
